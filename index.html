@@ -15,9 +15,6 @@
     <link rel="stylesheet" href="stylesheets/stylesheet.css">
 	<link rel="stylesheet" href="stylesheets/fonts/fontsheet.css" type="text/css" media="screen" />
 	
-	<!-- Included Scripts -->
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script> 
 </head>
 
 <!-- Header and Navigation -->
@@ -57,7 +54,15 @@
 <body>
 	
 <!--Slider-->
-<div class="slider"></div>
+<div class="slider">
+	
+		<div class="item"><img src="images/slideshow/img1.jpg" /></div>
+		<div class="item"><img src="images/slideshow/img2.jpg" /></div>
+		<div class="item"><img src="images/slideshow/img3.jpg" /></div>
+		<div class="item"><img src="images/slideshow/img4.jpg" /></div>
+		<div class="item"><img src="images/slideshow/img5.png" /></div>
+	
+</div>
 
 
 <!--Content-->
@@ -92,6 +97,15 @@
 		<div class="recent-blog"><h2 align="center">This is a blog.</h2>
 			<h3 align="center">time // theme // read post</h3></div>
 	</div>
+
+	<!-- Included Scripts -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script> 
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="scripts/slideshow.js"></script>
+	<script type="text/javascript">
+		$('.slider').slideshow({interval: 5000});
+	</script>
 </body>
 
 <!--Footer-->
