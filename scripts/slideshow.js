@@ -16,7 +16,7 @@
 		
 		cur.animate({
 			opacity:1
-		}, 2000);
+		}, fadeTime);
 
 		setTimeout(function(){
 			cur.animate({
