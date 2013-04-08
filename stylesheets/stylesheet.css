@@ -231,7 +231,8 @@ Index Content
 .button-wrapper {
 	width:75%;
 	height:300px;
-	padding:30px 165px 10px 165px;
+	margin:30px auto;
+	/*padding:30px 165px 10px 165px;*/
 }
 .button {
 	background-color:#000;

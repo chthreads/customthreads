@@ -12,22 +12,11 @@
 
 	this.start = function(){
 		//el.children('ul').children('li').css('opacity', '1');
-		cur.addClass('curSlide').removeClass('hidden');
-		
-		cur.animate({
-			opacity:1
-		}, fadeTime);
+		slides.addClass('hidden');
 
-		setTimeout(function(){
-			cur.animate({
-				opacity:0
-			}, fadeTime);
-		}, interval-fadeTime);
+		fadeIn();
 
-
-		cur.siblings('.item').addClass('hidden').removeClass('curSlide');
-
-		setInterval(goNext, interval);
+		setInterval(goNext, interval+2*fadeTime);
 	}
 
 	goNext = function(){
@@ -42,21 +31,23 @@
 		
 		pos++;
 
-		cur.addClass('curSlide').removeClass('hidden');
+		fadeIn();
 
+	}
+	fadeIn = function(){
+		cur.siblings('.item').removeClass('curSlide').addClass('hidden');//.css('opacity', 0);
+		cur.addClass('curSlide').removeClass('hidden');
 			cur.animate({
 			opacity:1
-		}, fadeTime);
+		}, fadeTime, function(){
+			setTimeout(fadeOut, interval);
+		});
+	}
 
-		setTimeout(function(){
+	fadeOut = function(){
 			cur.animate({
 				opacity:0
-			}, fadeTime);
-		}, interval-fadeTime);
-
-	
-
-		cur.siblings('.item').addClass('hidden').removeClass('curSlide');//.css('opacity', 0);
+			}, fadeTime);		
 	}
 
 	this.start();
